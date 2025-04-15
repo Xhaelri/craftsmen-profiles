@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحرفيون المهرة</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f7f2;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #8b5a2b;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #8b5a2b;
+            font-size: 36px;
+        }
+        
+        .search-bar {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .search-bar input {
+            padding: 10px 15px;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .craftsmen-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .craftsman-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .craftsman-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .craftsman-image {
+            height: 200px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .craftsman-info {
+            padding: 20px;
+        }
+        
+        .craftsman-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #8b5a2b;
+        }
+        
+        .craftsman-specialty {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .craftsman-description {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .craftsman-contact {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .craftsman-location, .craftsman-phone {
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .rating {
+            color: #f8c51d;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>دليل الحرفيين المهرة</h1>
+            <p>اكتشف أفضل الحرفيين في منطقتك</p>
+        </header>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="ابحث عن حرفي أو مهنة...">
+        </div>
+        
+        <div class="craftsmen-grid">
+            <!-- حرفي 1 -->
+            <div class="craftsman-card">
+                <div class="craftsman-image">
+                    <img src="/api/placeholder/300/200" alt="صورة النجار">
+                </div>
+                <div class="craftsman-info">
+                    <div class="craftsman-name">أحمد محمود</div>
+                    <div class="craftsman-specialty">نجار محترف</div>
+                    <div class="rating">★★★★★</div>
+                    <div class="craftsman-description">
+                        يمتلك أحمد خبرة 15 عاماً في صناعة الأثاث الخشبي بتصاميم عصرية وتقليدية. متخصص في الأعمال الخشبية الدقيقة والديكورات المنزلية.
+                    </div>
+                    <div class="craftsman-contact">
+                        <div class="craftsman-location">القاهرة، مصر</div>
+                        <div class="craftsman-phone">0123456789</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- حرفي 2 -->
+            <div class="craftsman-card">
+                <div class="craftsman-image">
+                    <img src="/api/placeholder/300/200" alt="صورة الحداد">
+                </div>
+                <div class="craftsman-info">
+                    <div class="craftsman-name">خالد العبدالله</div>
+                    <div class="craftsman-specialty">حداد متميز</div>
+                    <div class="rating">★★★★☆</div>
+                    <div class="craftsman-description">
+                        يقدم خالد خدمات الحدادة بأعلى جودة للمنازل والشركات. متخصص في تصنيع البوابات والأسوار والديكورات المعدنية المميزة.
+                    </div>
+                    <div class="craftsman-contact">
+                        <div class="craftsman-location">الرياض، السعودية</div>
+                        <div class="craftsman-phone">0567891234</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- حرفي 3 -->
+            <div class="craftsman-card">
+                <div class="craftsman-image">
+                    <img src="/api/placeholder/300/200" alt="صورة السباك">
+                </div>
+                <div class="craftsman-info">
+                    <div class="craftsman-name">محمد الحسن</div>
+                    <div class="craftsman-specialty">سباك خبير</div>
+                    <div class="rating">★★★★☆</div>
+                    <div class="craftsman-description">
+                        يمتلك محمد خبرة 10 سنوات في أعمال السباكة والصيانة المنزلية. يقدم حلولاً سريعة وفعالة لجميع مشاكل السباكة.
+                    </div>
+                    <div class="craftsman-contact">
+                        <div class="craftsman-location">دبي، الإمارات</div>
+                        <div class="craftsman-phone">0523456789</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- حرفي 4 -->
+            <div class="craftsman-card">
+                <div class="craftsman-image">
+                    <img src="/api/placeholder/300/200" alt="صورة الخزاف">
+                </div>
+                <div class="craftsman-info">
+                    <div class="craftsman-name">ليلى العمري</div>
+                    <div class="craftsman-specialty">خزافة تقليدية</div>
+                    <div class="rating">★★★★★</div>
+                    <div class="craftsman-description">
+                        تبدع ليلى في صناعة الفخار والخزف بتصاميم مستوحاة من التراث العربي. تقدم قطعاً فنية فريدة للديكور المنزلي.
+                    </div>
+                    <div class="craftsman-contact">
+                        <div class="craftsman-location">فاس، المغرب</div>
+                        <div class="craftsman-phone">0612345678</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- حرفي 5 -->
+            <div class="craftsman-card">
+                <div class="craftsman-image">
+                    <img src="/api/placeholder/300/200" alt="صورة الكهربائي">
+                </div>
+                <div class="craftsman-info">
+                    <div class="craftsman-name">سعيد الأحمد</div>
+                    <div class="craftsman-specialty">كهربائي معتمد</div>
+                    <div class="rating">★★★★★</div>
+                    <div class="craftsman-description">
+                        يقدم سعيد خدمات الكهرباء للمنازل والمكاتب بخبرة تزيد عن 12 عاماً. متخصص في التمديدات الكهربائية وحلول توفير الطاقة.
+                    </div>
+                    <div class="craftsman-contact">
+                        <div class="craftsman-location">عمان، الأردن</div>
+                        <div class="craftsman-phone">0791234567</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- حرفي 6 -->
+            <div class="craftsman-card">
+                <div class="craftsman-image">
+                    <img src="/api/placeholder/300/200" alt="صورة الخياط">
+                </div>
+                <div class="craftsman-info">
+                    <div class="craftsman-name">فاطمة الزهراء</div>
+                    <div class="craftsman-specialty">خياطة محترفة</div>
+                    <div class="rating">★★★★☆</div>
+                    <div class="craftsman-description">
+                        تتميز فاطمة بإبداعها في تصميم وخياطة الملابس التقليدية والعصرية. تقدم خدمات التفصيل والتطريز اليدوي بأعلى جودة.
+                    </div>
+                    <div class="craftsman-contact">
+                        <div class="craftsman-location">تونس العاصمة، تونس</div>
+                        <div class="craftsman-phone">0512345678</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>جميع الحقوق محفوظة © 2025 - دليل الحرفيين المهرة</p>
+        </footer>
+    </div>
+</body>
+</html>
